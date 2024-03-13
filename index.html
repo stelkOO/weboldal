@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://kit.fontawesome.com/0c7887452b.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+		
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles/lightbox.css">
+        <link rel="stylesheet" href="styles/main.css">
+        
+        <title>Ghost of Tsushima galéria</title>
+
+    </head>
+	
+
+    <body>
+<nav>
+  <ul>
+    <a href="#">Kezdőlap</a>
+    <a href="#">Bemutatkozás</a>
+    <a href="#">Szolgáltatások</a>
+    <a href="#">Referenciák</a>
+    <a class="active" href="#">Galéria</a>
+    <a href="#">Kapcsolat</a>
+	<div class="dropdown">
+    <i id="ikon" class="fa-solid fa-caret-down"></i> 
+	
+	<div  id="cont" class="dropdown-content">
+      <a href="#">Weblapok</a>
+	  
+      <a href="#">Programok</a>
+	  
+      <a href="#">Egyéb</a>
+	  
+    </div></div>
+  </ul>
+  <hr>
+</nav>
+
+
+
+
+			
+			
+			<div class="hero-title">
+			<img src ="img/logopng.png">
+			</div>
+			<br><br>
+			
+			<div class="bemutato" id="bemutatoSzin">A ghost of Tsushima egy Japánban játszódó játék, melyben egy szamuráj karakterét irányíthatjuk</div>
+
+<script>
+    var mondat1 = document.getElementById("bemutatoSzin");
+    var szavak1 = mondat1.innerText.split(' ');
+    var index1 = 0;
+
+    function animacio1() {
+        szavak1[index1] = '<span style="color: #880808;">' + szavak1[index1] + '</span>';
+        mondat1.innerHTML = szavak1.join(' ');
+        index1 = (index1 + 1) % szavak1.length;
+    }
+
+    setInterval(animacio1, 200);
+
+    var mondat2 = document.getElementById("bemutatoSzin");
+    var szavak2 = mondat2.innerText.split(' ');
+    var index2 = 0;
+
+    function animacio2() {
+        var middleIndex = Math.floor(szavak2.length / 2);
+        szavak2[index2] = '<span style="color: #880808;">' + szavak2[index2] + '</span>';
+        szavak2[szavak2.length - 1 - index2] = '<span style="color: #880808;">' + szavak2[szavak2.length - 1 - index2] + '</span>';
+        mondat2.innerHTML = szavak2.join(' ');
+        index2 = (index2 + 1) % (middleIndex + 1); 
+    }
+
+    setInterval(animacio2, 200);
+</script>
+
+
+
+
+<script>
+    
+
+var elem1 = document.getElementById('ikon');
+var elem2 = document.getElementById('cont');
+
+elem1.addEventListener('mouseover', function() {
+  
+ elem1.className = 'fa-solid fa-caret-right';
+});
+
+
+
+
+  elem1.addEventListener('mouseout', function() {
+  
+  elem1.className = 'fa-solid fa-caret-down';
+});
+elem2.addEventListener('mouseover', function() {
+  
+ elem1.className = 'fa-solid fa-caret-right';
+});
+
+
+
+
+  elem2.addEventListener('mouseout', function() {
+  
+  elem1.className = 'fa-solid fa-caret-down';
+});
+
+
+
+ 
+</script>	
+
+
+          
+
+	
+            <div class="gallery">
+			
+
+
+                <div class="img-container">
+                    <img src="img/1.jpg">
+                    <div class="title"><p>Tájkép,esti mezőről</p></div>
+                </div>
+
+                <div class="img-container">
+                    <img src="img/2.jpg">
+                    <div class="title"><p>Tájkép, napkelte</p></div>
+                </div>
+
+                <div class="img-container">
+                    <img src="img/3.jpg">
+                    <div class="title"><p>Tájkép, naplemente</p></div>
+                </div>
+
+                <div class="img-container">
+                    <img src="img/4.jpg">
+                    <div class="title"><p>Tájkép, erdő, és erőd</p></div>
+                </div>
+
+                <div class="img-container">
+                    <img src="img/5.jpeg">
+                    <div class="title"><p>Esti tájkép</p></div>
+                </div>
+				<div class="img-container">
+                    <img src="img/6.jpg">
+                    <div class="title"><p>Ellenséges csapatok</p></div>
+                </div>
+				
+				<div class="img-container">
+                    <img src="img/8.jpg">
+                    <div class="title"><p>Helyi tó</p></div>
+                </div>
+				<div class="img-container">
+                    <img src="img/9.jpg">
+                    <div class="title"><p>Lovaglás a mezőn</p></div>
+                </div>
+				<div class="img-container">
+                    <img src="img/jpegkep1.jpg">
+                    <div class="title"><p>Naplemente</p></div>
+                </div>
+				<div class="img-container">
+                    <img src="img/jpegkep2.jpg">
+                    <div class="title"><p>Növényzet</p></div>
+                </div>
+				
+				<div class="img-container">
+                    <img src="img/jpegkep3.jpg">
+                    <div class="title"><p>Hegyek</p></div>
+                </div>
+				
+				
+				<div class="img-container">
+                    <img src="img/jpegkep4.jpg">
+                    <div class="title"><p>Őszi tájkép</p></div>
+                </div>
+				<div class="img-container">
+                    <img src="img/10 (1).jpg">
+                    <div class="title"><p>Temető</p></div>
+                </div>
+				<div class="img-container">
+                    <img src="img/10 (2).jpg">
+                    <div class="title"><p>Aranyló naplemente</p></div>
+                </div>
+				
+				<div class="img-container">
+                    <img src="img/10 (4).jpg">
+                    <div class="title"><p>Párbaj</p></div>
+                </div>
+				<div class="img-container">
+                    <img src="img/10 (5).jpg">
+                    <div class="title"><p>Felszerelés</p></div>
+                </div><div class="img-container">
+                    <img src="img/10 (6).jpg">
+                    <div class="title"><p>Lepusztított halász falu</p></div>
+                </div>
+				<div class="img-container">
+                    <img src="img/11.jpg">
+                    <div class="title"><p>Erődítmény</p></div>
+                </div>
+				
+				
+				
+					
+				
+				
+				
+
+                </div>
+ 
+            </div>
+            <!-- FOOTER -->
+            <div class="clearfix"></div>
+            
+            <footer>
+                <hr>
+                <p class="footer-span">Stelkovics Olivér - Galéria</p>
+            </footer>
+        
+    </body>
+
+    <!-- SCRIPTS -->
+    <script src="scripts/lightbox.js"></script>
+	
+
+
+    
+</html>

@@ -24,26 +24,28 @@
     <body>
 <nav>
   <ul>
-    <a href="#">Kezdőlap</a>
-    <a href="#">Bemutatkozás</a>
-    <a href="#">Szolgáltatások</a>
-    <a href="#">Referenciák</a>
+    <a href="home.html">Kezdőlap</a>
+    <a href="https://hu.ign.com/ghost-of-tsushima/59893/review/teszt-ghost-of-tsushima">Bemutatkozás</a>
+    <a href="https://store.playstation.com/en-us/product/UP9000-CUSA11456_00-GHOSTDIRECTORCUT">Szolgáltatások</a>
+    
     <a class="active" href="#">Galéria</a>
-    <a href="#">Kapcsolat</a>
+    <a href="https://www.playstation.com/en-hu/support/playstation-support-contact-guide/">Kapcsolat</a>
 	<div class="dropdown">
-    <i id="ikon" class="fa-solid fa-caret-down"></i> 
+	<a href="#">Referenciák</a>
 	
 	<div  id="cont" class="dropdown-content">
-      <a href="#">Weblapok</a>
+      <a href="https://en.wikipedia.org/wiki/Ghost_of_Tsushima">Weblapok</a>
 	  
-      <a href="#">Programok</a>
+      <a href="https://www.playstation.com/hu-hu/games/ghost-of-tsushima/">Programok</a>
 	  
-      <a href="#">Egyéb</a>
+      <a href="https://www.pushsquare.com/news/2020/07/gallery_here_are_our_communitys_best_ghost_of_tsushima_photo_mode_screenshots">Egyéb</a>
 	  
     </div></div>
   </ul>
-  <hr>
+  
 </nav>
+<hr>
+
 
 
 
@@ -56,40 +58,42 @@
 			<br><br>
 			
 			<div class="bemutato" id="bemutatoSzin">A ghost of Tsushima egy Japánban játszódó játék, melyben egy szamuráj karakterét irányíthatjuk</div>
+			
 
+  
+	
 <script>
-    var mondat1 = document.getElementById("bemutatoSzin");
-    var szavak1 = mondat1.innerText.split(' ');
-    var index1 = 0;
+var characters;
+var mondat = document.getElementById("bemutatoSzin");
 
-    function animacio1() {
-        szavak1[index1] = '<span style="color: #880808;">' + szavak1[index1] + '</span>';
-        mondat1.innerHTML = szavak1.join(' ');
-        index1 = (index1 + 1) % szavak1.length;
+    characters = mondat.innerText.split('');
+    mondat.innerHTML = ''; 
+    var kozepI = Math.floor(characters.length / 2); 
+    for (var i = 0; i < characters.length; i++) {
+        var span = document.createElement('span');
+        span.textContent = characters[i];
+        mondat.appendChild(span);
+        animacio(span, i, kozepI);
     }
 
-    setInterval(animacio1, 200);
 
-    var mondat2 = document.getElementById("bemutatoSzin");
-    var szavak2 = mondat2.innerText.split(' ');
-    var index2 = 0;
+function animacio(span, i, kozepI) {
+    var kozeptav = Math.abs(i - kozepI);
+    var delay = 100 * Math.abs(kozepI - kozeptav); 
+    setTimeout(function () {
+        span.style.transition = "color 0.3s ease"; 
+        span.style.color = '#880808';
+    }, delay); 
+}
 
-    function animacio2() {
-        var middleIndex = Math.floor(szavak2.length / 2);
-        szavak2[index2] = '<span style="color: #880808;">' + szavak2[index2] + '</span>';
-        szavak2[szavak2.length - 1 - index2] = '<span style="color: #880808;">' + szavak2[szavak2.length - 1 - index2] + '</span>';
-        mondat2.innerHTML = szavak2.join(' ');
-        index2 = (index2 + 1) % (middleIndex + 1); 
-    }
 
-    setInterval(animacio2, 200);
+
 </script>
 
 
 
 
-<script>
-    
+   <script> 
 
 var elem1 = document.getElementById('ikon');
 var elem2 = document.getElementById('cont');

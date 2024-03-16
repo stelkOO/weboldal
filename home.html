@@ -45,6 +45,45 @@
   
 </nav>
 <hr>
+			
+			<div class="hero-title">
+			<img src ="img/logopng.png">
+			</div>
+			<br><br>
+			
+			<div class="bemutato" id="bemutatoSzin">---------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+			
+
+  
+	
+<script>
+var characters;
+var mondat = document.getElementById("bemutatoSzin");
+
+    characters = mondat.innerText.split('');
+    mondat.innerHTML = ''; 
+    var kozepI = Math.floor(characters.length / 2); 
+    for (var i = 0; i < characters.length; i++) {
+        var span = document.createElement('span');
+        span.textContent = characters[i];
+        mondat.appendChild(span);
+        animacio(span, i, kozepI);
+    }
+
+
+function animacio(span, i, kozepI) {
+    var kozeptav = Math.abs(i - kozepI);
+    var delay = 100 * Math.abs(kozepI - kozeptav); 
+    setTimeout(function () {
+        span.style.transition = "color 0.3s ease"; 
+        span.style.color = '#880808';
+    }, delay); 
+}
+
+
+
+</script>
+
 <iframe  class="ablak"
 src="https://www.youtube.com/embed/iqysmS4lxwQ?autoplay=1&mute=1">
 </iframe>
